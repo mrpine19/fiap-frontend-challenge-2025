@@ -5,13 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Gothic+A1&display=swap');
-  </style>
-  <title>CONTATO</title>
+  <title>PAG-INICIAL</title>
 </head>
 <body>
-  <header>
+<header>
     <nav class="navegar">
         <h1>GCL</h1>
         <ul class="menu-ul">
@@ -20,13 +17,7 @@
                 INÍCIO
                 <img src="/images/home.png" alt="" class="home">
             </a>
-            <li class="items-nav">
-            <a href="#">
-                Projetos
-                <img src="images/projetos.png" alt="Telefone" class="contato"> <!--concertar css-->
-            </a>  
-        </li>
-        </li>
+            </li>
             <li class="items-nav">
             <a href="/sobrenos.html">
                 SOBRE NÓS
@@ -36,26 +27,43 @@
             <li class="items-nav">
             <a href="/FAQ.html">
                 FAQ
-                <img src="images/image4.png" alt="FAQ" class="faq">
+                <img src="/images/image4.png" alt="FAQ" class="faq">
             </a>
         </li>
             <li class="items-nav">
             <a href="/contato.html">
                 CONTATO
-                <img src="images/image 5.png" alt="Telefone" class="contato">
-            </a>
+                <img src="/images/image5.png" alt="Telefone" class="contato">
+            </a>     
         </li>
       </ul>
     </nav>
+</header>
+<h2>Fale conosco: </h2>
+<p>Preencha o formulário abaixo e logo você será respondido</p>
+<form action="#">
+
+<label for="nome">Digite seu nome</label><br>
+<input type="text" id="nome" placeholder="Seu nome completo" required><br>
+
+<label for="Email"></label><br>
+<input type="email" id="email" placeholder="digite seu email" required><br>
+
+<label for="tel">Numero de celular</label><br>
+<input type="tel" name="celular" id="celular" placeholder="celular" required><br>
+
+<label for="mensagem">Digite sua mensagem para nós</label><br>
+<textarea name="mensagem" id="mensagem" rows="5" required></textarea><br>
+
+<input type="submit" value="Enviar" id="enviar"><br>
+
+</form>
+
   <footer>
     <div>
-      <span class="span">© 2025 GCL. Todos os direitos reservados.</span>
-    </div>
-    <div>
-
+      <span>© 2025 GCL. Todos os direitos reservados.</span>
     </div>
   </footer>
-</header>
 <script src="/script.js/script.js"></script>
 </body>
 </html>

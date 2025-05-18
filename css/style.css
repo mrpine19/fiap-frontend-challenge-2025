@@ -3,7 +3,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  text-align: justify;
   scroll-behavior: smooth;
 }
 
@@ -17,8 +16,6 @@ body {
 .navegar {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
   gap: 30px;
 
 }
@@ -36,8 +33,7 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: right;
-  align-items: right;
+  justify-content: flex-end;
   gap: 5px;
   padding: 0;
   width: 100%;
@@ -49,33 +45,22 @@ body {
   text-decoration: none;
   color: inherit;
   font-weight: normal;
-  font-size: 10px;
+  font-size: 14px;
   transition: color 0.3s, background-color 0.3s;
-  padding: 10px;
+  padding: 12px;
   border-radius: 30px;
   background-color: rgba(0, 0, 0, 0.114);
+  gap: 6px;
+  height: 30px;
 }
 
 /* ÍCONES */
-.items-nav .faq {
-    width: 15px;
-    height: auto;
-    vertical-align: middle;
-    margin-left: 6px;
-}
-.items-nav .contato {
-    width: 15px;
-    height: auto;
-    vertical-align: middle;
-    margin-left: 6px;
-}
-.items-nav .home {
-    width: 15px;
-    height: auto;
-    vertical-align: middle;
-    margin-left: 6px;
-}
-.items-nav .sobrenos {
+.items-nav .home,
+.items-nav .faq,
+.items-nav .projetos,
+.items-nav .contato,
+.items-nav .sobrenos
+ {
     width: 15px;
     height: auto;
     vertical-align: middle;
@@ -88,18 +73,17 @@ body {
 }
 .modoidoso {
   display: flex;
-  gap: 20px;
-  padding: 19px;
+  gap: 30px;
+  padding: 20px;
   margin: 10px auto;
   margin-top: 10px;
   background: rgba(0, 0, 0, 0.1);
   border-radius: 65px;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.414);
-  flex-wrap: wrap;
-  max-width: 1200px;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 1000px;
   
 
 }
@@ -108,7 +92,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex: 1;
   gap: 15px;
 }
 .conteudo-modoidoso {
@@ -120,11 +103,8 @@ body {
   gap: 10px;
 }
 .modoidoso .icone-modoidoso {
-  width: 150px;
+  width: 170px;
   height: auto;
-  margin: 0;
-  flex-shrink: 0;
-  
 }
 .modoidoso .h2-modoidoso {
   font-family: 'Poppins', sans-serif;
@@ -142,16 +122,15 @@ body {
 .saibamais {
   margin-top: 10px;
   background: rgba(0, 0, 0, 0.1);
-  width: 150px;
-  height: 35px;
+  padding: 13px;
   border-radius: 65px;
-  display: inline-flex;
-  flex-direction: row;
+  display: flex;
   justify-content: center;
   align-items: center;
   gap: 5px;
   border: none;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.267);
+  font-size: 15px;
   cursor: pointer;
 
 }
@@ -161,10 +140,43 @@ body {
   display: block;
   
 }
+footer {
+  margin: 25px;
+  padding: 5px;
+  margin-bottom: 0px;
+}
 @media (max-width: 600px) {
+  .navegar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2px;
+  }
+  .menu-ul {
+    justify-content: center;
+    
+  }
   .modoidoso {
     flex-direction: column;
     align-items: center;
-    
+    margin-bottom: 20px;
+  }
+}
+@media (min-width: 992px){
+  .modoidoso {
+    margin: 0 auto;
+    margin-bottom: 15px;
+    padding: 40px;
+  }
+  .modoidoso .conteudo-modoidoso {
+    font-size: 1.0em;
+  }
+  .icone-modoidoso {
+    width: 100px;
+  }
+    .modoidoso .icone-modoidoso {
+  width: 170px;
+  height: auto;
+  margin-left: 60px;
   }
 }
