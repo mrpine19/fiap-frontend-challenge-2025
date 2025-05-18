@@ -4,7 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="/css/responsividade.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <script src="/scriptt.js" defer></script>
   <title>PAG-INICIAL</title>
 </head>
 <body>
@@ -39,31 +41,55 @@
       </ul>
     </nav>
 </header>
-<h2>Fale conosco: </h2>
-<p>Preencha o formulário abaixo e logo você será respondido</p>
-<form action="#">
+<section class="faleconosco">
+  <h2 id="contatoh2">Fale conosco: </h2>
+  <form class="formulario" id="form">
+    <p id="preencha-p">Preencha o formulário abaixo e logo você será respondido</p>
 
-<label for="nome">Digite seu nome</label><br>
-<input type="text" id="nome" placeholder="Seu nome completo" required><br>
+    <div class="form-group">
+      <label for="nome">Digite seu nome: </label>
+      <input type="text" id="nome" placeholder="Seu nome completo">
+      <a> Erro</a>
+    </div>
 
-<label for="Email"></label><br>
-<input type="email" id="email" placeholder="digite seu email" required><br>
+    <div class="form-group">
+      <label for="email">Digite seu email: </label>
+      <input type="email" id="email" placeholder="digite seu email">
+    <a> Erro</a>
+    </div>
 
-<label for="tel">Numero de celular</label><br>
-<input type="tel" name="celular" id="celular" placeholder="celular" required><br>
+    <div class="form-group">
+      <label for="celular">Digite seu número de celular: </label>
+      <input type="tel" name="celular" id="celular" placeholder="celular">
+    <a> Erro</a>
+    </div>
 
-<label for="mensagem">Digite sua mensagem para nós</label><br>
-<textarea name="mensagem" id="mensagem" rows="5" required></textarea><br>
+    <div class="form-group">
+      <label for="motivo">Selecione o motivo do contato: </label>
+      <select name="motivo" id="motivo">
+         <option value="" disabled selected>Selecione o motivo do contato</option>
+        <option value="duvidas">Dúvidas</option>
+        <option value="reclamações">Reclamação</option>
+        <option value="feedback">Feedback ou sugestão</option>
+        <option value="outros">Outros</option>
+      </select>
+    <a> Erro</a>
+    </div>
 
-<input type="submit" value="Enviar" id="enviar"><br>
+    <div class="form-group">
+      <label for="mensagem">Digite sua mensagem para nós! </label>
+      <textarea name="mensagem" id="mensagem" rows="6" cols="25"></textarea>
+    <a> Erro</a>
+    </div>
 
-</form>
+    <input type="submit" value="Enviar" id="enviar">
+  </form>
+</section>
 
-  <footer>
+  <footer class="faleconoscofooter">
     <div>
       <span>© 2025 GCL. Todos os direitos reservados.</span>
     </div>
   </footer>
-<script src="/script.js/script.js"></script>
 </body>
 </html>

@@ -1,0 +1,51 @@
+/* CELULAR + TABLET */
+@media (max-width: 992px) {
+  .navegar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2px;
+  }
+
+  .menu-ul {
+    justify-content: center;
+  }
+
+  .modoidoso {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 18px;
+    padding: 10px;
+  }
+}
+
+/* DESKTOP */
+@media (min-width: 992px) {
+  .modoidoso {
+    margin: 25px auto;
+    margin-bottom: 15px;
+    padding: 40px;
+  }
+
+  .modoidoso .conteudo-modoidoso {
+    font-size: 1.2em;
+  }
+
+  .modoidoso .icone-modoidoso {
+    width: 170px;
+    height: auto;
+    margin-left: 60px;
+  }
+
+  .saibamais {
+    padding: 15px;
+    font-size: 15px;
+    margin: 15px;
+  }
+
+  .formulario {
+    max-width: 1200px;
+    padding: 35px 150px;
+  }
+}
