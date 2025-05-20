@@ -13,6 +13,8 @@ body {
   padding: 20px;
 }
 
+/*menu(contato,faq,home..)*/
+
 .navegar {
   display: flex;
   flex-direction: row;
@@ -55,6 +57,7 @@ body {
 }
 
 /* ÍCONES */
+
 .items-nav .home,
 .items-nav .faq,
 .items-nav .projetos,
@@ -229,7 +232,100 @@ background-color: #3c493bb7;
 }
 .form-group.error a {
   visibility: visible;
-}
-.faleconoscofooter {
 
 }
+
+
+
+/*pagina sobre nós */
+
+.tudosobre {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  gap: 10px;
+}
+
+.integrantes,
+.quemsomosnos,
+.objetivoprojeto {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.263);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.414);
+  font-size: 1.1rem;
+  margin: 10px;
+  font-family: 'Poppins', sans-serif;
+  text-align: left;
+  border-radius: 60px;
+  padding: 35px;
+}
+.membros {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.membros img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 100px;
+}
+
+.membros .info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.membros .nome {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.membros .rm {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.membros .github,
+.membros .linkedin {
+  text-decoration: none;
+  color: #2c5f2d;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.membros .github:hover,
+.membros .linkedin:hover {
+  text-decoration: underline;
+  color: #1f3d1b;
+}
+
+.centraliza {
+  display: block;
+  width: fit-content;
+  margin: 0 auto 20px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 35px;
+}
+
+#turma {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+
+
+/*pagina FAQ */
+
+
