@@ -1,12 +1,10 @@
 const form = document.querySelector("#form");
+if (form) {
 const nameInput = document.querySelector("#nome");
 const emailInput = document.querySelector("#email");
 const motivoInput = document.querySelector("#motivo");
 const telInput = document.querySelector("#celular");
 const mensagemTextArea = document.querySelector("#mensagem");
-
-
-// retirar o erro após preenchido
 
 nameInput.addEventListener("input", () => {
     if (nameInput.value !== "") {
@@ -148,3 +146,22 @@ function limparTudo () {
     motivoInput.value = "";
     mensagemTextArea.value = "";
 } //limpa tudo quando o form for preenchido
+}
+
+//botão do faq
+
+const botoes = document.querySelectorAll('.faq-botao');
+if (botoes.length > 0) {
+botoes.forEach(btn => {
+    btn.addEventListener('click', () => {
+        const botaoAtivo = document.querySelector('.faq-botao.ativo');
+        if(botaoAtivo && botaoAtivo !== btn) {
+            botaoAtivo.classList.remove('ativo');
+            botaoAtivo.nextElementSibling.classList.remove('show');
+        }
+    btn.classList.toggle('ativo');
+    btn.nextElementSibling.classList.toggle('show')
+    });
+
+});
+}

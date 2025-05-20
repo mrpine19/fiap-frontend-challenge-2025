@@ -18,10 +18,15 @@
     font-size: 18px;
     padding: 10px;
   }
+  .membros {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
 /* DESKTOP */
 @media (min-width: 992px) {
+  /* modo idoso */
   .modoidoso {
     margin: 25px auto;
     margin-bottom: 15px;
@@ -43,9 +48,25 @@
     font-size: 15px;
     margin: 15px;
   }
+  /*formulario*/
 
   .formulario {
     max-width: 1200px;
     padding: 35px 150px;
   }
+
+  /* faq */
+
+  .faq-botao {
+  display: block;
+  width: 80%;
+  max-width: 1200px;
+  min-width: 300px;
+  margin: 20px auto;
+}
+.resposta {
+  width: 1200px;
+  margin: 10px auto;
+  display: block;
+}
 }
