@@ -7,89 +7,90 @@
   <link rel="stylesheet" href="/css/responsividade.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <script src="scriptt.js" defer></script>
-  <title>PAG-INICIAL</title>
+  <title>PAGINA-CONTATO</title>
 </head>
 <body>
 <header>
-    <nav class="navegar">
+    <nav class="navegar" aria-label="Menu principal de navegação">
         <h1>GCL</h1>
         <ul class="menu-ul">
-        <li class="items-nav">
+          <li class="items-nav">
             <a href="/index.html">
                 INÍCIO
-                <img src="/images/home.png" alt="" class="home">
+                <img src="/images/home.png" alt="Ícone de página inicial" class="home">
             </a>
-            </li>
-            <li class="items-nav">
+          </li>
+          <li class="items-nav">
             <a href="/sobrenos.html">
                 SOBRE NÓS
-                <img src="/images/sobrenos.png" alt="" class="sobrenos">
+                <img src="/images/sobrenos.png" alt="Ícone sobre nós" class="sobrenos">
             </a>
-        </li>
-            <li class="items-nav">
+          </li>
+          <li class="items-nav">
             <a href="/FAQ.html">
                 FAQ
-                <img src="/images/image4.png" alt="FAQ" class="faq">
+                <img src="/images/image4.png" alt="Ícone FAQ" class="faq">
             </a>
-        </li>
-            <li class="items-nav">
+          </li>
+          <li class="items-nav">
             <a href="/contato.html">
                 CONTATO
-                <img src="/images/image5.png" alt="Telefone" class="contato">
+                <img src="/images/image5.png" alt="Ícone telefone" class="contato">
             </a>     
-        </li>
-      </ul>
+          </li>
+        </ul>
     </nav>
 </header>
-<section class="faleconosco">
+<section class="faleconosco" aria-label="Formulário de contato">
   <h2 id="contatoh2">Fale conosco: </h2>
-  <form class="formulario" id="form">
+  <form class="formulario" id="form" novalidate>
     <p id="preencha-p">Preencha o formulário abaixo e logo você será respondido</p>
 
     <div class="form-group">
       <label for="nome">Digite seu nome: </label>
-      <input type="text" id="nome" placeholder="Seu nome completo">
-      <a> Erro</a>
+      <input type="text" id="nome" placeholder="Digite seu nome completo!" aria-describedby="nome-erro" required>
+      <a id="nome-erro" role="alert" aria-live="assertive">Erro</a>
     </div>
 
     <div class="form-group">
       <label for="email">Digite seu email: </label>
-      <input type="email" id="email" placeholder="digite seu email">
-    <a> Erro</a>
+      <input type="email" id="email" placeholder="digite seu email!" aria-describedby="email-erro" required>
+      <a id="email-erro" role="alert" aria-live="assertive">Erro</a>
     </div>
 
     <div class="form-group">
       <label for="celular">Digite seu número de celular: </label>
-      <input type="tel" name="celular" id="celular" placeholder="celular">
-    <a> Erro</a>
+      <input type="tel" name="celular" id="celular" placeholder="digite seu numero de celular!" aria-describedby="celular-erro" required>
+      <a id="celular-erro" role="alert" aria-live="assertive">Erro</a>
     </div>
 
     <div class="form-group">
-      <label for="motivo">Selecione o motivo do contato: </label>
-      <select name="motivo" id="motivo">
+      <label for="motivo" alt="selecione o motivo de contato">Selecione o motivo do contato: </label>
+      <select name="motivo" id="motivo" aria-describedby="motivo" required>
          <option value="" disabled selected>Selecione o motivo do contato</option>
-        <option value="duvidas">Dúvidas</option>
-        <option value="reclamações">Reclamação</option>
-        <option value="feedback">Feedback ou sugestão</option>
-        <option value="outros">Outros</option>
+         <option value="duvidas">Dúvidas</option>
+         <option value="reclamações">Reclamação</option>
+         <option value="feedback">Feedback ou sugestão</option>
+         <option value="outros">Outros</option>
       </select>
-    <a> Erro</a>
+      <a id="motivo-erro" role="alert" aria-live="assertive">Erro</a>
     </div>
 
     <div class="form-group">
       <label for="mensagem">Digite sua mensagem para nós! </label>
-      <textarea name="mensagem" id="mensagem" rows="6" cols="25"></textarea>
-    <a> Erro</a>
+      <textarea name="mensagem" id="mensagem" rows="6" cols="25" aria-describedby="mensagem-erro" required></textarea>
+      <a id="mensagem-erro" role="alert" aria-live="assertive">Erro</a>
     </div>
 
-    <input type="submit" value="Enviar" id="enviar">
+    <input type="submit" value="Enviar" id="enviar" aria-label="Enviar formulário de contato">
+    <div id="mensagem-sucesso" role="alert" aria-live="polite"></div>
   </form>
 </section>
 
-  <footer class="faleconoscofooter">
-    <div>
-      <span>© 2025 GCL. Todos os direitos reservados.</span>
-    </div>
-  </footer>
+<footer class="faleconoscofooter">
+  <div>
+    <span>© 2025 GCL. Todos os direitos reservados.</span>
+  </div>
+</footer>
 </body>
 </html>

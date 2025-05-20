@@ -6,12 +6,14 @@ const motivoInput = document.querySelector("#motivo");
 const telInput = document.querySelector("#celular");
 const mensagemTextArea = document.querySelector("#mensagem");
 
+
+// nome
 nameInput.addEventListener("input", () => {
     if (nameInput.value !== "") {
         clearError(nameInput);
     }
 });
-
+// email
 emailInput.addEventListener("input", () => {
     if (emailInput.value !== "" && isEmailValid(emailInput.value)) {
         clearError(emailInput);
@@ -20,6 +22,7 @@ emailInput.addEventListener("input", () => {
     }
 });
 
+//telefone
 telInput.addEventListener("input", () => {
     if (telInput.value !== "") {
         clearError(telInput);
@@ -29,11 +32,15 @@ telInput.addEventListener("input", () => {
     telInput.value = telInput.value.replace(/[^0-9]/g, '')
 });
 
+//motivo
+
     motivoInput.addEventListener("change", () => {
         if (motivoInput.value !== "") {
             clearError(motivoInput);
         }
 });
+
+//caixa de texto
     mensagemTextArea.addEventListener("input", () => {
         if (mensagemTextArea.value !== "") {
             clearError(mensagemTextArea);
@@ -42,71 +49,79 @@ telInput.addEventListener("input", () => {
 
 
 
-    //previne de recarregar a pagina
 form.addEventListener("submit", (event) => {
-    event.preventDefault();
+  event.preventDefault(); // Impede o comportamento padrão de recarregar a página
 
+  let formValido = true; // Flag para verificar se o formulário está ok
+  let primeiroErro = null; 
 
-    checarNome();
-
-    let formValido = true;
-
-    // Verifica se o nome está vazio
-
-    if (nameInput.value === "") {
-        errorInput(nameInput, "Preencha seu nome!");
-        formValido = false;
-    }
-
-    // se já encontrou erro, não aparece outros caso tenha
-    if(!formValido) return;
-
-    // Verifica se o email está vazio ou não é válido
-
-    if (emailInput.value === "") {
-        errorInput(emailInput, "Por favor, preencha seu email.");
-        formValido = false;
-    } else if (!isEmailValid(emailInput.value)) {
-        errorInput(emailInput, "Por favor, digite um email válido.");
-        formValido = false;
-    }
-
-    if(!formValido) return;
-
-    // caso celular não seja um numero valido
-
-    if (telInput.value === "") {
-        errorInput(telInput, "Por favor digite seu número!");
-        formValido = false;
-    }
-
-    if(!formValido) return;
-
-    // caso motivo não seja escolhido
-
-    if (motivoInput.value === "") {
-    errorInput(motivoInput, "Por favor coloque um motivo na lista!");
+  // Validação do nome
+  if (nameInput.value === "") {
+    errorInput(nameInput, "Preencha seu nome!"); // Mostra mensagem de erro
+    if (!primeiroErro) primeiroErro = nameInput; 
     formValido = false;
-    }
+  } else {
+    clearError(nameInput); // Limpa a mensagem se estiver válido
+  }
 
-    if(!formValido) return;
+  // Validação do email
+  if (emailInput.value === "") {
+    errorInput(emailInput, "Por favor, preencha seu email.");
+    if (!primeiroErro) primeiroErro = emailInput;
+    formValido = false;
+  } else if (!isEmailValid(emailInput.value)) {
+    errorInput(emailInput, "Por favor, digite um email válido.");
+    if (!primeiroErro) primeiroErro = emailInput;
+    formValido = false;
+  } else {
+    clearError(emailInput);
+  }
 
-    // Verifica se a mensagem está vazia
+  // Validação do celular
+  if (telInput.value === "") {
+    errorInput(telInput, "Por favor digite seu número!");
+    if (!primeiroErro) primeiroErro = telInput;
+    formValido = false;
+  } else {
+    clearError(telInput);
+  }
 
-    if (mensagemTextArea.value === "") {
-        errorInput(mensagemTextArea, "Por favor digite sua mensagem!");
-        formValido = false;
-    } else {
-        clearError(mensagemTextArea);
-    }
+  // Validação do motivo
+  if (motivoInput.value === "") {
+    errorInput(motivoInput, "Por favor coloque um motivo na lista!");
+    if (!primeiroErro) primeiroErro = motivoInput;
+    formValido = false;
+  } else {
+    clearError(motivoInput);
+  }
 
-// com formulário preenchido, vai enviar um alerta e vai limpar-lo
+  // Validação da mensagem
+  if (mensagemTextArea.value === "") {
+    errorInput(mensagemTextArea, "Por favor digite sua mensagem!");
+    if (!primeiroErro) primeiroErro = mensagemTextArea;
+    formValido = false;
+  } else {
+    clearError(mensagemTextArea);
+  }
 
-    if (formValido) {
-        alert("Formulário enviado com sucesso!");
-        limparTudo();
-    }
+  // Se houver erro, foca no primeiro campo inválido
+  if (!formValido) {
+    primeiroErro.focus(); 
+    return; // Interrompe envio
+  }
+
+  // Se tudo estiver certo, exibe mensagem e limpa o formulário
+const mensagemSucesso = document.getElementById("mensagem-sucesso");
+    mensagemSucesso.innerText = "Formulário enviado com sucesso!";
+    mensagemSucesso.style.display = "block";
+  limparTudo(); 
+
+
+   setTimeout(() => { // limpar mensagem sucesso
+        mensagemSucesso.style.display = "none";
+    }, 5000);
 });
+
 
 
 function isEmailValid(email) {
