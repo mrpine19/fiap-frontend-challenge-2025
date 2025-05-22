@@ -166,17 +166,29 @@ function limparTudo () {
 //botão do faq
 
 const botoes = document.querySelectorAll('.faq-botao');
-if (botoes.length > 0) {
-botoes.forEach(btn => {
-    btn.addEventListener('click', () => {
-        const botaoAtivo = document.querySelector('.faq-botao.ativo');
-        if(botaoAtivo && botaoAtivo !== btn) {
-            botaoAtivo.classList.remove('ativo');
-            botaoAtivo.nextElementSibling.classList.remove('show');
-        }
-    btn.classList.toggle('ativo');
-    btn.nextElementSibling.classList.toggle('show')
-    });
 
-});
+if (botoes.length > 0) {
+  botoes.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const resposta = btn.nextElementSibling;
+      const isAtivo = btn.classList.contains('ativo');
+
+      // Fecha todos
+      botoes.forEach(b => {
+        b.classList.remove('ativo');
+        const r = b.nextElementSibling;
+        r.classList.remove('show');
+        r.setAttribute('hidden', true);
+        b.setAttribute('aria-expanded', 'false');
+      });
+
+      // Se não estava ativo, abre
+      if (!isAtivo) {
+        btn.classList.add('ativo');
+        resposta.classList.add('show');
+        resposta.removeAttribute('hidden');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
 }
