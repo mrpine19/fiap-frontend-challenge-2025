@@ -531,6 +531,34 @@ background-color: #3c493bb7;
   margin-bottom: 1rem;
 }
 
+/* Seção de Evidências */
+.secao-evidencia {
+  padding: 4rem 0;
+}
+
+.secao-evidencia h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.cartoes-evidencia {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.cartao-evidencia {
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  border-top: 4px solid var(--primary);
+}
+
+.cartao-evidencia h3 {
+  color: var(--primary);
+}
+
 /*pagina chatbot*/
 .explicacaochat {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.421);
