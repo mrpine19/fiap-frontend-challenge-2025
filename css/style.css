@@ -406,6 +406,7 @@ background-color: #3c493bb7;
   margin-right: auto;
 }
 
+/* Seção sobre o Problema */
 .secao-problema {
   background-color: var(--gray);
   padding: 4rem 0;
@@ -451,6 +452,43 @@ background-color: #3c493bb7;
   margin: 0 auto;
   text-align: center;
   font-size: 1.1rem;
+}
+
+/* Seção sobre os Benefícios */
+.secao-beneficios {
+  padding: 4rem 0;
+}
+
+.secao-beneficios h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.cartao-beneficios {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  align-items: center;
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.conteudo-beneficio {
+  flex: 1;
+}
+
+.benefit-content h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.evidencia {
+  font-style: italic;
+  color: var(--text-light);
+  font-size: 0.9rem;
+  margin-top: 1rem;
 }
 
 /*pagina chatbot*/
