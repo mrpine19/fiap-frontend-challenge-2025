@@ -60,15 +60,10 @@ body {
 
 /* ÍCONES */
 
-.items-nav .home,
-.items-nav .faq,
-.items-nav .projetos,
-.items-nav .contato,
-.items-nav .sobrenos
- {
-    width: 20px;
-    height: auto;
-    margin-left: 4px;
+.items-nav img {
+  width: 20px;
+  height: auto;
+  margin-left: 4px;
 }
 
 .items-nav a:hover {
@@ -144,15 +139,6 @@ body {
   display: block;
   
 }
-footer {
-  padding: 5px;
-}
-
-
-
-
-
-
 
 /*pagina contato */
 
@@ -377,7 +363,7 @@ background-color: #3c493bb7;
   font-size: 20px;
   color: #000000;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.4;
 }
 
@@ -399,16 +385,16 @@ background-color: #3c493bb7;
   justify-content: flex-start;
 }
 .cardslider {
-  width: 320px;
+  width: 300px;
   height: 600px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
   border-radius: 40px;
   margin: 50px 0 50px 50px;
   position: relative;
-  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .slides {
@@ -425,8 +411,7 @@ background-color: #3c493bb7;
 
 .slide img {
   width: 100%;
-  border-radius: 20px;
-  object-fit: contain;
+  height: 100%;
 }
 
 /* Botões */
@@ -457,34 +442,26 @@ button.next {
   right: 5px;
 }
 .explicacaochat {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-weight: 400;
   border-radius: 50px;
   background-color: #52715127;
   padding: 28px;
-  font-size: 16px;
+}
+.explicando {
+  font-size: 18px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 450;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.explicando h2 {
+  font-size: 23px;
+  text-align: center;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Rodapé */
+/*footer tudo*/
 footer {
-  text-align: center;
   padding: 20px;
   margin: 20px;
+  text-align: center;
 }
-
