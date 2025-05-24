@@ -1,18 +1,18 @@
 /* CELULAR + TABLET */
-@media (max-width: 992px) {
+@media (max-width: 768px) {
   .navegar {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
-    padding: 10px 15px;
+    gap: 5px;
   }
 
   .menu-ul {
     display: flex;
     justify-content: center;
-    gap: 10px;
-    padding: 0;
+    gap: 5px;
+    flex-wrap: wrap;
+    padding: 5px;
     margin: 0 auto;
   }
 
@@ -71,7 +71,51 @@
   .resposta.show {
     margin-top: 10px;
   }
+
+
+  /*pagina chatbot */
+  .tudoslides {
+    justify-content: center;
+    margin: 0 auto;
+    flex-wrap: wrap;
+  }
+
+  .cardslider {
+    margin: 15px 0;
+    width: 85%; 
+    height: auto;
+  }
 }
+@media (min-width: 768px){
+  .navegar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 15px;
+  }
+    .menu-ul {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 0;
+    margin: 0 auto;
+  }
+  
+  /*pagina chatbot*/
+  .explicacaochat {
+    display: flex;
+    align-items: center;
+    margin: 15px;
+    max-width: 800px;
+    max-height: 750px;
+    font-size: 20px;
+    
+  }
+
+}
+
+
 
 /* DESKTOP */
 @media (min-width: 992px) {
@@ -118,4 +162,13 @@
   max-width: 1200px;
   margin: 10px auto;
 }
+  /*pagina chatbot */
+  .explicacaochat {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 950px;
+    max-height: 650px;
+  }
 }
