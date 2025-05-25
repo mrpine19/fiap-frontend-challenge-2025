@@ -50,18 +50,18 @@ telInput.addEventListener("input", () => {
 
 
 form.addEventListener("submit", (event) => {
-  event.preventDefault(); // Impede o comportamento padrão de recarregar a página
+  event.preventDefault(); 
 
-  let formValido = true; // Flag para verificar se o formulário está ok
+  let formValido = true; 
   let primeiroErro = null; 
 
   // Validação do nome
   if (nameInput.value === "") {
-    errorInput(nameInput, "Preencha seu nome!"); // Mostra mensagem de erro
+    errorInput(nameInput, "Preencha seu nome!");
     if (!primeiroErro) primeiroErro = nameInput; 
     formValido = false;
   } else {
-    clearError(nameInput); // Limpa a mensagem se estiver válido
+    clearError(nameInput); 
   }
 
   // Validação do email
@@ -104,20 +104,18 @@ form.addEventListener("submit", (event) => {
     clearError(mensagemTextArea);
   }
 
-  // Se houver erro, foca no primeiro campo inválido
   if (!formValido) {
     primeiroErro.focus(); 
-    return; // Interrompe envio
+    return; 
   }
 
-  // Se tudo estiver certo, exibe mensagem e limpa o formulário
 const mensagemSucesso = document.getElementById("mensagem-sucesso");
     mensagemSucesso.innerText = "Formulário enviado com sucesso!";
     mensagemSucesso.style.display = "block";
   limparTudo(); 
 
 
-   setTimeout(() => { // limpar mensagem sucesso
+   setTimeout(() => { 
         mensagemSucesso.style.display = "none";
     }, 5000);
 });
@@ -136,7 +134,7 @@ function checarNome() {
     if (nomeDigitado === "") {
         errorInput(nameInput, "Preencha seu nome!"); 
     } else {
-        clearError(nameInput); // Limpa o erro se o nome estiver preenchido
+        clearError(nameInput); 
     }
 }
 
@@ -150,8 +148,8 @@ function errorInput(input, message) {
 function clearError(input) {
     const formItem = input.parentElement;
     const textMessage = formItem.querySelector("a");
-    formItem.className = "form-group"; // Remove a classe de erro
-    textMessage.innerText = ""; // Limpa a mensagem de erro
+    formItem.className = "form-group"; 
+    textMessage.innerText = ""; 
 }
 
 function limparTudo () {
@@ -160,7 +158,7 @@ function limparTudo () {
     telInput.value = "";
     motivoInput.value = "";
     mensagemTextArea.value = "";
-} //limpa tudo quando o form for preenchido
+} 
 }
 
 //botão do faq
@@ -173,7 +171,6 @@ if (botoes.length > 0) {
       const resposta = btn.nextElementSibling;
       const isAtivo = btn.classList.contains('ativo');
 
-      // Fecha todos
       botoes.forEach(b => {
         b.classList.remove('ativo');
         const r = b.nextElementSibling;
@@ -182,7 +179,6 @@ if (botoes.length > 0) {
         b.setAttribute('aria-expanded', 'false');
       });
 
-      // Se não estava ativo, abre
       if (!isAtivo) {
         btn.classList.add('ativo');
         resposta.classList.add('show');
@@ -192,9 +188,7 @@ if (botoes.length > 0) {
     });
   });
 }
-//função dos slides da página chatbot
 
-//mover slides automaticamente && com botão
 let currentIndex = 0;
 
 function moveSlide(direction) {
@@ -214,7 +208,7 @@ function moveSlide(direction) {
 }
 
 function autoSlide() {
-  moveSlide(1); // Avança slide
+  moveSlide(1); 
 }
 
 // intervalo imagens
