@@ -1,0 +1,267 @@
+/* CELULAR*/
+@media (max-width: 768px) {
+  .navegar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+  }
+
+  .menu-ul {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    flex-wrap: wrap;
+    padding: 5px;
+    margin: 0 auto;
+  }
+
+  .modoidoso {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 18px;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .membros {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 600px;
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  .membros .info {
+    align-items: center;
+  }
+
+  .membros img {
+    margin-bottom: 10px;
+  }
+
+  .faq-perguntas {
+  margin: 60px 0px 10px;
+  }
+
+  .faq-botao {
+    display: block;
+    width: 90%;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 17px;
+    padding: 12px;
+    text-align: left;
+  }
+
+  .resposta {
+    display: block;
+    width: 90%;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    font-size: 16px;
+  }
+
+  .resposta.show {
+    margin-top: 10px;
+  }
+  /*pagina home*/
+  .home-hero h1 {
+    font-size: 2.2rem;
+  }
+  
+  .home-hero .subtitulo {
+    font-size: 1.1rem;
+  }
+  
+  .grade-estatisticas {
+    grid-template-columns: 1fr;
+  }
+}
+  /*pagina chatbot */
+  .tudoslides {
+    justify-content: center;
+    margin: 0 auto;
+    flex-wrap: wrap;
+  }
+
+  .cardslider {
+    margin: 15px 0;
+    width: 85%; 
+    height: auto;
+  }
+  /* pagina contato*/
+  
+  input::placeholder {
+    font-size: 70%;
+    text-align: start;
+  
+}
+
+
+
+/*tablet*/
+
+@media (min-width: 768px){
+   .menu-ul {
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 5px;
+  }
+  .navegar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 15px;
+  }
+    .menu-ul {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    padding: 0;
+    margin: 0 auto;
+  }
+  .items-nav a {
+    font-size: 18px;
+  }
+  /*pagina FAQ*/
+  .FAQ-pai {
+    margin-top: 70px;
+  }
+  .faq-botao {
+  display: block;
+  width: 100%;
+  border-radius: 100px;
+  height: 70px;
+  margin: 35px auto;
+  font-size: 25px;
+  
+}
+.resposta {
+  width: 100%;
+  font-weight: 500;
+}
+
+  /*pagina chatbot*/
+  .explicacaochat {
+    display: flex;
+    align-items: center;
+    margin: 15px;
+    max-width: 800px;
+    max-height: 750px;
+    font-size: 20px;
+    
+  }
+
+  /*pagina home*/
+  .home-hero {
+    padding: 3rem 1rem;
+  }
+
+  .home-hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .home-hero .subtitulo {
+    font-size: 1.1rem;
+  }
+
+
+  .grade-estatisticas {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+
+ 
+  .cartao-beneficios {
+    flex-direction: column; 
+    text-align: center;
+    padding: 1.5rem;
+  }
+
+ 
+  .container-passos {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+
+  .passo {
+    padding: 1rem;
+  }
+
+  
+  .cartoes-evidencia {
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+    gap: 1.5rem;
+  }
+
+}
+
+
+
+/* DESKTOP */
+
+@media (min-width: 992px) {
+    .navegar {
+    margin-bottom: 15px;
+  }
+  /* modo idoso */
+  .modoidoso {
+    margin: 25px auto;
+    margin-bottom: 15px;
+    padding: 40px;
+  }
+
+  .modoidoso .conteudo-modoidoso {
+    font-size: 1.2em;
+  }
+
+  .modoidoso .icone-modoidoso {
+    width: 170px;
+    height: auto;
+    margin-left: 60px;
+  }
+
+  .saibamais {
+    padding: 15px;
+    font-size: 15px;
+    margin: 15px;
+  }
+  /*formulario*/
+
+  .formulario {
+    max-width: 1200px;
+    padding: 35px 150px;
+  }
+
+    /* faq */
+
+  .faq-botao {
+  display: block;
+  width: 1200px;
+  height: 50px;
+  font-size: 20px;
+  margin: 20px auto;
+}
+.resposta {
+  width: 80%;
+  text-align: center;
+  max-width: 1200px;
+  margin: 10px auto;
+}
+
+  /*pagina chatbot */
+  .explicacaochat {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 950px;
+    max-height: 650px;
+  }
+}
