@@ -10,9 +10,8 @@
   <title>Test Drive de Teleconsulta | IMREA HC-FMUSP</title>
 </head>
 <body>
-  <header>
+  <header class="testdrive-header">
     <nav class="navegar" role="navigation" aria-label="Menu principal do site">
-      <h1>GCL</h1>
       <ul class="menu-ul">
         <li class="items-nav">
           <a href="index.html">
@@ -46,7 +45,7 @@
         </li>
       </ul>
     </nav>
-    <div class="hero-testdrive">
+    <div class="testdrive-hero">
       <h1>Test Drive da Teleconsulta</h1>
       <p class="subtitulo">Simulação prática para reduzir ansiedade e falhas técnicas em pacientes do IMREA</p>
     </div>
@@ -73,10 +72,125 @@
         <p class="texto-problema">Pacientes idosos e com deficiência enfrentam dificuldades técnicas e ansiedade ao usar plataformas digitais para teleconsultas, resultando em altas taxas de absenteísmo e perda de eficiência clínica.</p>
       </div>
     </section>
+
+    <!-- Seção: Benefícios-->
+    <section class="secao-beneficios" aria-labelledby="benefits-title">
+      <div class="container">
+        <h2 id="benefits-title">Como o Test Drive resolve esses problemas?</h2>
+        
+        <div class="cartao-beneficios">
+          <div class="conteudo-beneficio">
+            <h3>Simulação Realista</h3>
+            <p>Interface idêntica à plataforma METHIS usada nas consultas reais, permitindo que os pacientes pratiquem exatamente o que precisarão fazer no dia da consulta.</p>
+            <p class="evidencia"><strong>Base científica:</strong> BMC (2021) - Falhas diminuem quando o treino replica a experiência real.</p>
+          </div>
+        </div>
+        
+        <div class="cartao-beneficios">
+          <div class="conteudo-beneficio">
+            <h3>Avatar Médico Interativo</h3>
+            <p>Guia o paciente com instruções claras por voz e texto, reduzindo a ansiedade e aumentando a confiança no processo.</p>
+            <p class="evidencia"><strong>Base científica:</strong> "Avaliação Global do Idoso" (2021) - Figuras humanizadas reduzem ansiedade em 70% dos casos.</p>
+          </div>
+        </div>
+        
+        <div class="cartao-beneficios">
+          <div class="conteudo-beneficio">
+            <h3>Feedback Imediato</h3>
+            <p>Após cada ação importante, o sistema pergunta se o usuário conseguiu realizar a tarefa e oferece ajuda imediata em caso de dificuldades.</p>
+            <p class="evidencia"><strong>Base científica:</strong> JMIR Aging (2021) - Confirmação explícita aumenta a confiança dos usuários.</p>
+          </div>
+        </div>
+        
+        <div class="cartao-beneficios">
+          <div class="conteudo-beneficio">
+            <h3>Certificado de Conclusão</h3>
+            <p>Ao final do treino, o paciente recebe um certificado virtual que reforça sua preparação e reduz a ansiedade sobre a consulta real.</p>
+            <p class="evidencia"><strong>Base científica:</strong> "Percepção de Idosos" (2020) - Reforço positivo aumenta a adesão em 22%.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção: Passo a passo-->
+     <section class="secao-passos" aria-labelledby="titulo-passos">
+      <div class="container">
+        <h2 id="titulo-passos">Como funciona o Test Drive</h2>
+        <div class="container-passos">
+          <div class="passo">
+            <span class="numero-passo">1</span>
+            <h3>Receba o link</h3>
+            <p>Após agendar sua consulta, você receberá um link exclusivo por WhatsApp ou SMS.</p>
+          </div>
+          <div class="passo">
+            <span class="numero-passo">2</span>
+            <h3>Pratique</h3>
+            <p>Siga as instruções do avatar médico para simular todo o processo de acesso à consulta.</p>
+          </div>
+          <div class="passo">
+            <span class="numero-passo">3</span>
+            <h3>Obtenha ajuda</h3>
+            <p>Em caso de dificuldades, o sistema oferece suporte imediato ou contato humano.</p>
+          </div>
+          <div class="passo">
+            <span class="numero-passo">4</span>
+            <h3>Esteja preparado</h3>
+            <p>Após concluir, você receberá um certificado e estará pronto para sua consulta real!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção: Evidências Científicas -->
+    <section class="secao-evidencia" aria-labelledby="evidecia-titulo">
+      <div class="container">
+        <h2 id="evidecia-titulo">Baseado em evidências científicas</h2>
+        <div class="cartoes-evidencia">
+          <div class="cartao-evidencia">
+            <h3>Redução de 40% em erros</h3>
+            <p>Instruções por voz reduzem erros de navegação em pacientes idosos (Voice-Based Interfaces for Low-Literacy Patients, 2022)</p>
+          </div>
+          <div class="cartao-evidencia">
+            <h3>90% de adesão</h3>
+            <p>Idosos que praticaram com plataformas digitais antes da consulta tiveram 90% de adesão vs. 50% sem treino ("Avaliação Global do Idoso", 2021)</p>
+          </div>
+          <div class="cartao-evidencia">
+            <h3>70% redução de ansiedade</h3>
+            <p>Suporte visual e figuras humanizadas reduzem ansiedade tecnológica em idosos ("Avaliação Global do Idoso", 2021)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
-  <footer>
-    <div>
-      <span>© 2025 GCL. Todos os direitos reservados.</span>
+  <footer class="footer">
+    <div class="container-footer">
+      <div class="marca-footer">
+        <img src="images/logo-imrea.jpeg" alt="IMREA HC-FMUSP" class="logo-footer">
+        <p>Instituto de Medicina Física e Reabilitação do Hospital das Clínicas da FMUSP</p>
+      </div>
+      <div class="links-footer">
+        <h3>Links Rápidos</h3>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="projetos.html">Projetos</a></li>
+          <li><a href="sobrenos.html">Sobre Nós</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h3>Contato</h3>
+        <address>
+          <p>Av. Dr. Enéas de Carvalho Aguiar, 255 - Cerqueira César, São Paulo - SP</p>
+          <p>Telefone: (11) 2661-0000</p>
+          <p>Email: imrea@hc.fm.usp.br</p>
+        </address>
+      </div>
+    </div>
+    <div class="direitos-footer">
+      <p>© 2025 IMREA HC-FMUSP. Todos os direitos reservados.</p>
+      <p>Desenvolvido por CGL HealthTech</p>
     </div>
   </footer>
 <script src="script.js"></script>
