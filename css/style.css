@@ -1,3 +1,16 @@
+/* Estilos gerais */
+:root {
+  --primary: rgba(81, 145, 7, 0.33);
+  --primary-dark: rgba(11, 140, 119, 0.31);
+  --secondary: rgba(142, 209, 197, 0.2);
+  --text: #333;
+  --text-light: #666;
+  --white: #fff;
+  --verde-alternativo: rgba(169, 209, 142, 0.2);
+  --gray-dark: #e0e0e0;
+  --font-main: 'Poppins', sans-serif;
+}
+
 /* RESET / BASE */
 * {
   margin: 0;
@@ -7,13 +20,39 @@
 }
 
 body {
-  background: linear-gradient(90deg, rgba(81, 145, 7, 0.33) 18%, rgba(11, 140, 119, 0.31) 75%, rgba(9, 156, 131, 0.37) 100%);
-  font-family: Arial, sans-serif;
-  color: #000000;
-  padding: 20px;
+  font-family: var(--font-main);
+  color: var(--text);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 0;
 }
 
 /*menu(contato,faq,home..)*/
+
+h1, h2, h3, h4 {
+  color: var(--primary);
+  margin-top: 0;
+}
+
+.testdrive-header {
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: var(--white);
+  padding: 1rem 0;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary);
+}
 
 .navegar {
   display: flex;
@@ -57,6 +96,25 @@ body {
 }
 
 
+.testdrive-hero {
+  text-align: center;
+  padding: 4rem 0;
+}
+
+.testdrive-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--white);
+}
+
+.subtitulo {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 
 /* ÍCONES */
 
@@ -72,7 +130,7 @@ body {
 }
 
 .items-nav a:hover {
-  color: #0174ee;
+  color: var(--primary);
   background-color: rgba(0, 0, 0, 0.1);
 }
 .modoidoso {
@@ -388,35 +446,15 @@ background-color: #3c493bb7;
 }
 
 /*pagina test-drive*/
-.hero-testdrive {
-  text-align: center;
-  padding: 4rem 0;
-}
-
 .secao-problema h2 {
   text-align: center;
   margin-bottom: 3rem;
 }
 
-.subtitulo {
-  font-size: 1.25rem;
-  margin-bottom: 2rem;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 /* Seção sobre o Problema */
 .secao-problema {
-  background-color: var(--gray);
+  background-color: var(--secondary);
   padding: 4rem 0;
-}
-
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem 0;
 }
 
 .grade-estatisticas {
@@ -493,7 +531,7 @@ background-color: #3c493bb7;
 
 /* Seção de Passos */
 .secao-passos {
-  background-color: var(--secondary);
+  background-color: var(--verde-alternativo);
   padding: 4rem 0;
 }
 
@@ -653,9 +691,63 @@ button.next {
 
 
 /* Rodapé */
-footer {
+.footer {
+  background-color: #222;
+  color: var(--white);
+  padding: 3rem 0 1rem;
+}
+
+.container-footer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.marca-footer img {
+  max-width: 180px;
+  margin-bottom: 1rem;
+}
+
+.links-footer h3, .footer-contact h3 {
+  color: var(--white);
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+.links-footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.links-footer li {
+  margin-bottom: 0.5rem;
+}
+
+.links-footer a {
+  color: #ccc;
+  transition: color 0.3s ease;
+}
+
+.links-footer a:hover {
+  color: var(--white);
+}
+
+.contato-footer address {
+  font-style: normal;
+  color: #ccc;
+}
+
+.contato-footer p {
+  margin: 0.5rem 0;
+}
+
+.direitos-footer {
   text-align: center;
-  padding: 20px;
-  margin: 20px;
+  padding-top: 2rem;
+  border-top: 1px solid #444;
+  color: #999;
+  font-size: 0.9rem;
 }
 
