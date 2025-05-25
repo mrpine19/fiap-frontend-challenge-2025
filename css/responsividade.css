@@ -1,4 +1,4 @@
-/* CELULAR + TABLET */
+/* CELULAR*/
 @media (max-width: 768px) {
   .navegar {
     display: flex;
@@ -85,8 +85,24 @@
     width: 85%; 
     height: auto;
   }
+  /* pagina contato*/
+  
+  input::placeholder {
+    font-size: 70%;
+    text-align: start;
+  }
 }
+
+
+
+/*tablet*/
+
 @media (min-width: 768px){
+   .menu-ul {
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 5px;
+  }
   .navegar {
     display: flex;
     flex-wrap: wrap;
@@ -97,11 +113,31 @@
     .menu-ul {
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 6px;
     padding: 0;
     margin: 0 auto;
   }
+  .items-nav a {
+    font-size: 18px;
+  }
+  /*pagina FAQ*/
+  .FAQ-pai {
+    margin-top: 70px;
+  }
+  .faq-botao {
+  display: block;
+  width: 100%;
+  border-radius: 100px;
+  height: 70px;
+  margin: 35px auto;
+  font-size: 25px;
   
+}
+.resposta {
+  width: 100%;
+  font-weight: 500;
+}
+
   /*pagina chatbot*/
   .explicacaochat {
     display: flex;
@@ -118,7 +154,11 @@
 
 
 /* DESKTOP */
+
 @media (min-width: 992px) {
+    .navegar {
+    margin-bottom: 15px;
+  }
   /* modo idoso */
   .modoidoso {
     margin: 25px auto;
@@ -152,16 +192,18 @@
 
   .faq-botao {
   display: block;
-  width: 80%;
-  max-width: 1200px;
-  min-width: 300px;
+  width: 1200px;
+  height: 50px;
+  font-size: 20px;
   margin: 20px auto;
 }
 .resposta {
-  width: 100%;
+  width: 80%;
+  text-align: center;
   max-width: 1200px;
   margin: 10px auto;
 }
+
   /*pagina chatbot */
   .explicacaochat {
     display: flex;
