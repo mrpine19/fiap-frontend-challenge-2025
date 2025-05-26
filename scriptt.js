@@ -208,7 +208,7 @@ function moveSlide(direction) {
 }
 
 function autoSlide() {
-  moveSlide(1); 
+  moveSlide(1); // Avança slide
 }
 
 // intervalo imagens
